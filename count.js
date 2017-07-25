@@ -1,15 +1,14 @@
 function countLetters(str){
   //background
   //remove all spaces in the string and create an empty object
-  var noSpaces = str.replace(/ /g,'');
+  var noSpaces = str.replace(/ /g,'')
+  var letters = {}
   //execute
   //parse each character and add an entry in the object
   for (var i = 0; i < noSpaces.length; i++){
-    console.log(noSpaces.charAt(i))
+    letters[(noSpaces.charAt(i))] = (letters[(noSpaces.charAt(i))] || 0) + 1
   }
   //output
   //show me the object
-  return ""
+  return letters
 }
-
-console.log(countLetters("twitch twitch"))
